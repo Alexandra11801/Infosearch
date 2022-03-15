@@ -3,7 +3,7 @@ import re
 from nltk.corpus import stopwords
 
 doc_path = 'documents\\doc'
-tokens_file = open('tokens.txt', 'a', encoding='utf-8')
+tokens_file = open('../tokens.txt', 'a', encoding='utf-8')
 tokens = set()
 lemmas = dict()
 stops = stopwords.words('russian')
@@ -21,7 +21,7 @@ for i in range(1, 201):
         lemmas[token].add(word)
     doc.close()
 tokens_file.close()
-lemmas_file = open('lemmas.txt', 'a', encoding='utf-8')
+lemmas_file = open('../lemmas.txt', 'a', encoding='utf-8')
 for token in tokens:
     lemmas_file.write('{}:'.format(token))
     for t in lemmas[token]:

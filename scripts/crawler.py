@@ -4,7 +4,7 @@ import urllib.error
 
 path = 'https://www.labirint.ru/books/'
 doc_path = 'documents\\doc'
-index_file = open('index.txt', 'a')
+index_file = open('../index.txt', 'a')
 i = 1
 while i <= 200:
     index = random.randint(1,500000)
