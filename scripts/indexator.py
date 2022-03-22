@@ -10,7 +10,7 @@ tokens_file.close()
 index = dict((token, []) for token in tokens)
 doc_path = '../documents/doc'
 for i in range(1, 201):
-    doc = open(doc_path + str(i) + '.txt', 'r', encoding='utf-8')
+    doc = open('{}{}.txt'.format(doc_path, str(i)), 'r', encoding='utf-8')
     content = doc.read()
     doc.close()
     words = [w for w in re.findall(r'[а-я]+', content.lower()) if w not in stops and len(w) > 2]

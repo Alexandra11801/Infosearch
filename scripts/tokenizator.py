@@ -9,7 +9,7 @@ lemmas = dict()
 stops = stopwords.words('russian')
 morph = pymorphy2.MorphAnalyzer()
 for i in range(1, 201):
-    doc = open(doc_path+str(i)+'.txt', 'r', encoding='utf-8')
+    doc = open('{}{}.txt'.format(doc_path, str(i)), 'r', encoding='utf-8')
     content = doc.read()
     words = [w for w in re.findall(r'[а-я]+', content.lower()) if w not in stops and len(w) > 2]
     for word in words:

@@ -11,7 +11,7 @@ while i <= 200:
     url = path+str(index)+'/'
     try:
         page = urllib.request.urlopen(url)
-        doc = open(doc_path+str(i)+'.txt', 'w', encoding='utf-8')
+        doc = open('{}{}.txt'.format(doc_path, str(i)), 'r', encoding='utf-8')
         doc.write(page.read().decode('utf8'))
         doc.close()
         index_file.write('{}. {}\n'.format(i, url))
