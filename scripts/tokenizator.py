@@ -2,7 +2,7 @@ import pymorphy2
 import re
 from nltk.corpus import stopwords
 
-doc_path = 'documents\\doc'
+doc_path = 'documents/doc'
 tokens_file = open('../tokens.txt', 'a', encoding='utf-8')
 tokens = set()
 lemmas = dict()
